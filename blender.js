@@ -1,13 +1,17 @@
 var Blender = function(poop) {
     $('body').append($('<img src="splatter.png" style="display:none" id="tmp-splatter" />'))
-    this.usable_ht = $(window).height() - $('#tmp-splatter').height()
-    this.usable_wd = $(window).width() - $('#tmp-splatter').width()
+    this.usable_ht = $(window).height()
+    this.usable_wd = $(window).width()
     this.random_btw = function(from, to) {
         return Math.floor(Math.random()*(to-from+1)+from)
     }
     this.poop = poop
-
     var self = this
+
+    $('#tmp-splatter').load(function() {
+        self.usable_ht -= $(this).height()
+        self.usable_wd -= $(this).width()
+    })
     $('#blend-button').click(function() {
         self.blend()
     })
