@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=utf-8 />
+    <title>Poop Blender!</title>
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+    <script src="poop.js"></script>
+    <script src="blender.js"></script>
+    <script>
+    $(function() {
+        var poop = new Poop()
+        var blender = new Blender(poop)
+        poop.party()
+    })
+    </script>
+    <link rel="stylesheet" type="text/css" href="poop.css">
+</head>
+<body>
+    <div id="poop-blender">
+        <div id="poop-container"></div>
+        <div id="blender"></div>
+        <div class="clear"></div>
+    </div>
+    <div id="poop-text"></div>
+    <div id="blend-button">Blend!</div>
+</body>
+</html>

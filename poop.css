@@ -1,0 +1,42 @@
+#poop-blender {
+    margin: 25px;
+}
+#poop-container  {
+    float: left;
+    width: 200px;
+    height: 300px;
+    margin-top: 100px;
+}
+#poop-text {
+    font-size: 30px;
+    font-family: "Helvetica","Arial",sans-serif;
+    color: #000;
+}
+.poop, .blender-poop {
+    width: 73px;
+    height: 65px;
+    background: brown;
+    z-index: 2;
+    background: url('poop.png') no-repeat;
+}
+#blender {
+    width: 330px;
+    height: 420px;
+    background: yellow;
+    float: left;
+    position: relative;
+    z-index: 0;
+    background: url('blender.png') no-repeat;
+}
+.clear {
+    clear: both;
+}
+#blend-button {
+    font-size: 60px;
+    font-family: "Helvetica","Arial",sans-serif;
+    color: #5994d7;
+    cursor: pointer;
+    text-decoration: underline;
+    position: absolute;
+    z-index: 999;
+}
