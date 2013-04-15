@@ -1,6 +1,6 @@
 var Poop = function() {
     this.num_poops= 0
-    this.max_poops = 3
+    this.max_poops = 10
 }
 Poop.prototype.add = function(e, obj) {
     if(this.num_poops >= this.max_poops) return this.too_many_poops()
@@ -9,7 +9,7 @@ Poop.prototype.add = function(e, obj) {
     var new_poop = $('<div class="blender-poop" />').appendTo($('#blender'))
     new_poop.css({
         left: $('#blender').width()/2 - $(new_poop).width()/2
-      , top: (200 - $(new_poop).height()*this.num_poops)
+      , top: (200 - ($(new_poop).height()*this.num_poops / 4))
       , position: 'absolute'
     })
     this.num_poops++
