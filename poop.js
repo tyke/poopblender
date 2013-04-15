@@ -2,6 +2,7 @@ var Poop = function() {
     this.num_poops= 0
     this.max_poops = 10
 }
+
 Poop.prototype.add = function(e, obj) {
     if(this.num_poops >= this.max_poops) return this.too_many_poops()
     $('#poop-text').text('')
@@ -15,15 +16,18 @@ Poop.prototype.add = function(e, obj) {
     this.num_poops++
     this.prepare()
 }
+
 Poop.prototype.too_many_poops = function() {
     $('#poop-text').text('That is too many poops in the blender!')
     $('#poop-container').find('.poop').remove()
     this.prepare()
 }
+
 Poop.prototype.prepare = function() {
     $('#poop-container').append($('<div class="poop" />'))
     $( ".poop" ).draggable({ revert: 'invalid' })
 }
+
 Poop.prototype.party = function() {
     var self = this
     this.prepare()
