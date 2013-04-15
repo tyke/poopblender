@@ -1,3 +1,16 @@
+/**
+ * Contains the blender class
+ *
+ * @copyright 2013 Tyke
+ */
+
+/**
+ * Handles the blender and blending the poops
+ *
+ * @param {Poop} poop A poop object for blending
+ *
+ * @constructor
+ */
 var Blender = function(poop) {
     $('body').append($('<img src="splatter.png" style="display:none" id="tmp-splatter" />'))
     this.usable_ht = $(window).height()
@@ -27,6 +40,9 @@ Blender.prototype.random_btw = function (from, to) {
     return Math.floor(Math.random() * (to - from + 1) + from)
 }
 
+/**
+ * Blends the poops
+ */
 Blender.prototype.blend = function() {
     $('#poop-text').text('')
     var self = this
@@ -38,6 +54,9 @@ Blender.prototype.blend = function() {
     })
 }
 
+/**
+ * Splatters the poop after blending and removes the from the blender
+ */
 Blender.prototype.splatter = function() {
     if(this.poop.num_poops === 0) return
     var el = $('<img src="splatter.png" />').css({
