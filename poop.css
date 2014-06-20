@@ -38,7 +38,9 @@
     color: #5994d7;
     cursor: pointer;
     text-decoration: underline;
-    position: absolute;
     z-index: 999;
+    margin-left: 25px;
+}
+.score-title {
     margin-left: 25px;
 }
